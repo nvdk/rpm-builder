@@ -1,7 +1,11 @@
 # RPM Builder
-This is  a quick and dirty docker to build rpms, a work in progress
+This is  a quick and dirty docker to build rpms for centos 7, it uses rpm-build.
+*note*: it is still a work in progress, but should suffice for most simple use cases.
 
 # Use
+This script expects your source packages in `/your/rpm/path/SOURCES/` and your spec files in `/your/rpm/path/SPECS`. An example spec file is provided in this repository. If you use this spec file as a base you should provide a source package in `SOURCES/example-package-[version].tar.gz` 
+
+adjust the example spec file with your install instructions. See https://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/Packagers_Guide/sect-Packagers_Guide-Creating_a_Basic_Spec_File.html for more info.
 
 ```
 docker build .
